@@ -4,23 +4,21 @@ addons:
   sonarcloud:
     organization: "remmeds"
     token:
-      secure: "aiq0rqzw9XDodQT6SPf2rTkR3Vm6AugK4XEEc9xZfjdiwxyVe6Rj7ahwV5LSlIfw02LSJsUM+yeaPn+cqFRUzRfbmILtd+m5lJ3rS3MTLaFW08L3X/gpO/6ggudYukwVLTBH8fom5ieRTiXJy8yLgrrY+9O/iA4HFX0/VUc9zKD8j1ziNvoh+ZaNrE+DSmCzN/OS/I7ixYPchYXLDjLI/y/QIm/IsLz6EZGcjkvw18YNxws7MBxev1sMFvFzN6pEi6hz1IA8BGn6gtS2LrJ3SBh6jUh/aqZw/mweYkeqzyptMuhsuf2nvcGt3AW6b3qJFMdAsFVUkGaQVI8Uyy9biIYkA2p1GmOm49k/CH4QAmJl9XD+AA7nB2c/9Xo2HUjYD6eSuh2PZ+EeEiAM8KkXLGumth0m0ahRMcXKQej7MVaW9beKoll+Z3ktJ1aaDf1eYMpCwfW2XEZMZ1HfeG2nDvVN8pZwcIpaxvY516HY0kiRl5z+P2s2w8mWIM2XIreb3VnRNzv4eJrOYJijdatgtzc/CBiKQWicIEMI2psPyxN3crNCbNUkUfBzuUhUf66iEILjnouch/TN3WJWMJ/hVjyOrdnufR7VclIxUOjRvtPdQN7Cufj+MT2lV6WWpP+35VqKQR5dtK4Nb5p1HHtFdvp8F0yYda0LMUYgFL1oei8="
+      secure: "gd70421C5sJ61PYXMJdvREsSqqBaL5FXR4yEXE/HvIzRtr8YlfNY71onC8rcU4VmmSKn8Bn/U4ZbVR4abdsgdkizDEAy9USGJdBlyJ0tfZ1P78OzI8Ja7eG55bgAAIaIvSFrLxUAt3cEVxq5ElE9f6aqVO2cpM/ejLH4GHXAaEB64OUX1hUFgcMqymTL6IY1DX6nf+SVV2W928yqf2Neil4F7D4kz1uQu+pl9xo0/oSPceetVCduIx2iKqoE8z3nieJCYN+AhXLA3Wg8XnoJNWL4bJr2NZMHzgZxynjX5wx5t02hqOfn1vQdNFQhrnSrVk06Zp4LbDi/qoYUvaC6fmt/vCk8D63sRPkqxabgjlYVRmpyq5rAXClaRDJydBQv3yqc/Zgitpcn1IZr6r+PksowQvtCmPCaZfzYrNgCOdhPU7ZzkQbGiuDhTYw3+yu8AZXwysCIJ10XD3Uu8O8x7X80jT5IZT6A5+qMUAdX/LAJTx4AtDs+Z0gHDVu5/Iwr+JcfvBPdhWuWFNmMBpU5XNDDfTg/gr5I0zegML/nXspNaPaGFzM/Kq2UxF7zY8y8LC/2s/lEjbJCyWvuqusGifUQxDYOe+3r+OYKVCO1x2MUGvkEAJIoARLbNaegorMyo9dYkuojR5NTUbALxJjxRZajg9V2Coa9PNarbbLavhY="
 android:
   components:
-    - build-tools-27.0.3
-    - android-23
-    - extra
+  - build-tools-27.0.3
+  - android-23
+  - extra
 script:
-  - ./gradlew sonarqube
-
-sudo: required
-
+- "./gradlew test"
+- "./gradlew lint"
+- "./gradlew sonarqube"
 before_install:
- - chmod +x gradlew
-
+- chmod +x gradlew
 cache:
   directories:
-    - '$HOME/.m2/repository'
-    - '$HOME/.sonar/cache'
-    - '$HOME/.gradle'
-    - '.gradle'
+  - "$HOME/.m2/repository"
+  - "$HOME/.sonar/cache"
+  - "$HOME/.gradle"
+  - ".gradle"
