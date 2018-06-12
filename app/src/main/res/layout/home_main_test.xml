@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logo_home"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:contentDescription="logo"
+            app:srcCompat="@drawable/rem" />
+
+        <TextView
+            android:id="@+id/titre_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo_home"
+            android:padding="20dp"
+            android:gravity="center"
+            android:text="@string/titre_home"
+            android:textSize="25sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@id/titre_home"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:id="@+id/prises_jour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titre_home"
+            android:layout_alignParentBottom="true"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/row1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/logo_comp1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    tools:background="#AAA" />
+
+                <TextView
+                    android:id="@+id/medic1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/logo_comp1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    tools:text="@string/medic1" />
+
+                <TextView
+                    android:id="@+id/details1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/medic1"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="end"
+                    android:textColor="@android:color/black"
+                    tools:text="@string/details1" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/row2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/row1"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/logo_comp2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    tools:background="#AAA" />
+
+                <TextView
+                    android:id="@+id/medic2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/logo_comp2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    tools:text="@string/medic2" />
+
+                <TextView
+                    android:id="@+id/details2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/medic2"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="end"
+                    android:textColor="@android:color/black"
+                    tools:text="@string/details2" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/row3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/row2"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/logo_comp3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    tools:background="#AAA" />
+
+                <TextView
+                    android:id="@+id/medic3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/logo_comp3"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    tools:text="@string/medic3" />
+
+                <TextView
+                    android:id="@+id/details3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/medic3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="end"
+                    android:textColor="@android:color/black"
+                    tools:text="@string/details3" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/row4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/row3"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/logo_comp4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    tools:background="#AAA" />
+
+                <TextView
+                    android:id="@+id/medic4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/logo_comp4"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    tools:text="@string/medic4" />
+
+                <TextView
+                    android:id="@+id/details4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/medic4"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="end"
+                    android:textColor="@android:color/black"
+                    tools:text="@string/details4" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
